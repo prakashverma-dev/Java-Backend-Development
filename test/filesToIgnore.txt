@@ -1,0 +1,19 @@
+# Eclipse workspace metadata (machine-specific)
+.metadata/
+
+# Compiled files
+*.class
+bin/
+
+# Build output
+target/
+build/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary files
+*.tmp
+*.log

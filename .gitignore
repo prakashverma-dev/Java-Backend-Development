@@ -1,8 +1,32 @@
-# Compiled class file
-*.class
 
-# Log file
+
+# Eclipse workspace metadata (machine-specific)
+.metadata/
+
+# Compiled Java files
+*.class
+bin/
+
+# Build output
+target/
+build/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary files
+*.tmp
 *.log
+
+# To ignore TEST JRE 
+day-5__JRE/test_JRE/
+
+# In the directory matching all test_JRE/ folder get ignored
+# test_JRE/
+
+
 
 # BlueJ files
 *.ctxt
@@ -22,3 +46,6 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
+
+
+
