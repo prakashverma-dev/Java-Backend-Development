@@ -68,7 +68,11 @@ package com.kodewala.day20_21_Github;
  * > git status ---> tells the difference local and remote(may added by other developer), So In order to sync local and remote we do pull first then push. 
  * 
  * 
- * # Eclipse Project Push To Github via termainal and Setup : -
+ * 
+ * 
+ * 
+ * 
+ * ### Eclipse Project Push To Github via termainal and Setup : -
  * 
  *  Step1(First-Time Git User Only) : Setup Your Git Identity to local system/machine -
 
@@ -113,6 +117,14 @@ package com.kodewala.day20_21_Github;
 		>git add . -n    --> It will check what files has been successfully skiped in output preview displaying.
 		
 		Note : When you run >git add . -n, the output is printed directly on your terminal screen right below the command. It does not create an actual output folder or a new file.
+		
+		After Running we get something like this - MEANS these files will be added in final >git add . 
+		
+		add 'day5/other_file.txt'
+		add 'day5/main.py'
+		
+		
+		
 	
  * 
  * Alt + ctrl + T --> to open terminal directly.

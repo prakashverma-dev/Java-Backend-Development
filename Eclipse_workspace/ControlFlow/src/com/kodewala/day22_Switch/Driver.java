@@ -8,7 +8,7 @@ package com.kodewala.day22_Switch;
  * 
  * 
  * Switch : It is an alternative of if-else. 
- * 			When we have multiple conditons to check, we prefer to use switch over if-else.
+ * 			When we have multiple conditions to check each time, we prefer to use switch over if-else.
  * 
  * 
  * switch(<expression/condition expression>)
@@ -49,12 +49,12 @@ public class Driver {
 		// I will create object of 'Driver' class as indentify method is non static-
 		Driver driver = new Driver();
 		
-		driver.indetifyDay(1);
+//		driver.indetifyDay(1);
 		
 //		To take command line Input for dyanmic pass - 
-//		int day = Integer.parseInt(args[0]);
+		int day = Integer.parseInt(args[0]);
 //		
-//		driver.indetifyDay(day);
+		driver.indetifyDay(day); // F5 -- To step Into this method while debugging.
 			
 
 	}
@@ -103,3 +103,15 @@ public class Driver {
 	}
 
 }
+
+
+
+// Task : 
+
+
+
+
+
+
+
+
