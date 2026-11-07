@@ -118,9 +118,59 @@ When you type sysp and hit Ctrl + Space, Eclipse will automatically drop the tem
 
 
 
+#5. How data stored in Java : - 
+
+In Java, data is stored in memory using two primary architectural zones managed by the Java Virtual Machine (JVM): Stack Memory and Heap Memory. How data is routed to these zones depends entirely on whether it is a Primitive Type or a Reference (Non-Primitive ie. Object Type) Type.
 
 
 
 
+i. The Two Memory Zones: Stack vs. Heap Difference -
+
+
+Stack Memory : Primary Purpose  - Method execution, tracking active threads, and storing local variables.
+               Access Speed is Fast.
+               Lifecycle - Automatically managed. Data is erased when a method finishes executing.
+
+
+
+Heap Memory :   Primary Purpose - Global memory space for storing dynamic objects and data structures.
+                Access Speed is Slower (requires pointer navigation).
+                Lifecycle - Managed by the Garbage Collector, which destroys data only when it is no longer referenced.
+
+
+ii. How Different Data Types are Stored =
+
+  Primitive Data Types (Stored in Stack) : Java has 8 built-in primitive data types. When you declare a primitive variable inside a method, its actual binary value is stored directly inside the Stack memory.
+
+  Ex: void myMethod() {
+        int age = 25; // The value 25 is stored directly on the Stack.
+    }
+
+ Reference / Non-Primitive Types (Split: Stack + Heap) : Objects, Arrays, Strings, and Classes are Reference Types. They cannot fit into a fixed slot in the Stack, so their storage is split:
+
+     a. The Heap: Holds the actual content, variables, and metadata of the object.
+     b. The Stack: Holds a reference variable (a pointer/memory address) that links back to the object's true location in the Heap.
+  Example -
+
+    void createObject() {
+        String name = new String("Alice"); 
+        // "name" (the pointer) sits on the Stack.
+        // The actual text "Alice" sits on the Heap.
+    }
+
+
+iii. Special In-Memory Optimizations
+
+To keep applications running quickly and efficiently, Java utilizes internal pooling mechanisms:
+
+• The String Pool: Strings are immutable. If you create two separate string literals with the exact same text (e.g., String a = "Hello"; String b = "Hello";), Java stores the text "Hello" only once in a special zone of the Heap called the String Pool. Both variables point to the exact same memory address.
+
+• The Integer Pool: Java pre-caches integer values from -128 to 127 in the Stack layer. If your code assigns an Integer object within this range, Java reuses a pre-allocated reference to save processing power
+
+
+iv. Metaspace (Class Definitions)
+
+Apart from user data, the JVM must store the blueprints of your code. Starting with Java 8, Metaspace uses native system memory to host class metadata, method definitions, and the runtime constant pool. This is separated entirely from the standard Java Heap.
 
 */
