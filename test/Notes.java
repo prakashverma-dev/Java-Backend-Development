@@ -173,4 +173,126 @@ iv. Metaspace (Class Definitions)
 
 Apart from user data, the JVM must store the blueprints of your code. Starting with Java 8, Metaspace uses native system memory to host class metadata, method definitions, and the runtime constant pool. This is separated entirely from the standard Java Heap.
 
+
+
+
+
+
+
+
+
+
+
+
+#6. == Operator In Java :  In Java, the == operator does not always check object references; its behavior depends entirely on the data type being compared -
+
+
+Short : In case of Object types, It always compare the address of two Objects and In case of Primitive types It just compare the two given values.
+
+
+ a) For Primitive Types: It Checks Direct Value - When you use == on primitive data types (like int, double, char, boolean), it directly compares the actual values stored in memory.
+
+Note : In Case of Primitive data stores in Stack memory, Java doesnot provide or get the memory address or any physical location in the Stack memory. Java stores direct value of Primitive data in the STACK area.
+
+int a = 5; // 5 directly stored in memory.
+int b = 5; 
+System.out.println(a == b); // true (Compares the content/compares the actual values stored in memory)
+
+
+
+
+b) For Objects: It Checks Reference (Memory Address) - When you use == on object references (like String, Integer wrappers, or custom classes), it checks reference address. It returns true only if both variables point to the exact same object at the same memory location.
+
+String str1 = new String("hello");
+String str2 = new String("hello");
+
+System.out.println(str1 == str2); // false (two different memory address)
+System.out.println(str1.equals(str2)); // In case of .equals() in String Class, Its a exception coz it checks the content of two Objects.(WHERE as '.euquals()'' method bydefault in 'Object' class always checks the memory address of two objects.) // Hence true.
+
+
+
+
+
+
+
+
+
+
+
+#7. 
+
+i. Declaring a method : Java has strict rules for how a method declaration must be structured In same order. The compiler reads them in a specific sequence -
+
+<Modifiers(access or non-access) in any order> <Return Type fixed> <Method Name fixed>( <Parameters>){
+
+}
+
+Note: The Simple Rule to Remember - Think of the Return Type + Method Name as an unbreakable unit at the end of the declaration prefix.
+
+🧱 The Correct Order for Method Declarations
+
+When declaring a method, you must follow this exact layout from left to right:
+1. Access Modifiers : public, protected, private
+2. Non-Access Modifiers : static, final, abstract, synchronized
+3. Return Type : void, int, String, Person, etc.
+4. Method Name : main, calculateSum, etc.
+5. Parameters inside parentheses : (String[] args)
+
+
+Note : The only parts you can safely swap are the modifiers themselves (Access Modifiers and Non-Access Modifiers). As long as they all appear before the return type, their relative order does not matter to the compiler -
+
+// Standard / Recommended way
+public static void main(String[] args)  // Return type always comes before method name.
+
+// Also completely valid, though less common
+static public void main(String[] args) 
+
+Note : You cannot place static or access modifiers after the return type or after the method name.
+
+• public void static main(String[] args) ❌ (Compilation Error: static must come before the return type void)
+• public void main static(String[] args) ❌ (Compilation Error)
+
+
+ii.  Declaring a Class : When declaring a class, the class keyword and the name of the class form an unbreakable unit at the very end, Remember -
+
+<Modifiers In Any Order> class <Class_Name>{
+
+}
+
+
+The Allowed Order:
+
+1. Access Modifier: public (or package-private if left blank).
+2. Non-Access Modifiers: static, abstract, final.
+3. The Core: The keyword class.
+4. The Identifier: Your class name.
+
+Valid vs. Invalid Examples:
+
+• public final class Vehicle {} ✅ Valid (Standard)
+• final public class Vehicle {} ✅ Valid (Modifiers swapped)
+• public static class Person {} ✅ Valid (For nested/inner classes
+• class public Vehicle {} ❌ Illegal (Cannot put modifiers after class)
+• class Vehicle public {} ❌ Illegal
+
+
+iii. Declaring Variables (Fields) : When you are declaring a class variable (field) or a local variable, the data type and the variable name are bind or must come last -
+
+
+<Modifiers In Any Order>  <Data_type> <variable_Name>;
+<Modifiers In Any Order>  <Data_type> <variable_Name> = <variable_Value> ;
+
+The Allowed Order:
+1. Access Modifier: public, protected, private.
+2. Non-Access Modifiers: static, final, transient, volatile.
+3. Data Type: int, String, double, Person, etc.
+4. Variable Name: age, name, totalAmount.
+
+Valid vs. Invalid Examples:
+
+• private static final int MAX_SPEED = 120; ✅ Valid (Standard)
+• static final private int MAX_SPEED = 120; ✅ Valid (Modifiers swapped)
+• int private static MAX_SPEED = 120; ❌ Illegal (Cannot put modifiers after data type)
+• private int static MAX_SPEED = 120; ❌ Illegal (Cannot sandwich the data type)
+
 */
