@@ -1,4 +1,4 @@
-package com.kodewala.day23_String;
+package com.kodewala.day23_String_Literal;
 
 /*
  * 
