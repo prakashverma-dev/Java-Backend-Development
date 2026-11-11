@@ -4,11 +4,11 @@ package com.kodewala.day23_String_Literal;
  * 
  * String : Any Sequence of characterers considered as String.
  * 
- *  abcd, mohit --> string
- *  a --> single character
+ * Example : abcd, mohit --> string
+ *  		 a --> single character
  *  
  *  
- *  To Represent the 'string' in java, you should have 'object of String class'.
+ *  To Represent the 'string' in java, you should have object of 'String class'.
  *  
  *  Inbuilt 'String' Class In java -
  *  
@@ -25,6 +25,7 @@ package com.kodewala.day23_String_Literal;
  *  # immutable : After creation, we cannot change it.
  *  
  *  String object are immutable --> once String object created, you can not change it. If you try to change it in result we get new object but existing string object will not be changed.  
+ *  
  *  
  *  # How to create String Object in java : There are two ways -
  *  
@@ -146,7 +147,7 @@ STUDy : PERM GEN vs meta Space.
  * 
  * */
 
-public class Dtiver {
+public class Driver {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
