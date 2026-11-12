@@ -5,6 +5,29 @@ import com.kodewala.day38_Interface_Java8.SearchResult;
 
 /*
  * 
+ * 
+ * 
+ * Interface Revision : -
+ * 
+ * Java7 : 100% contract based --> PPROBLEM : In future, Interface is introducing functionality which is required for some of the classes.
+ * 
+ * 
+ * Java8 : Introduced default method ---> which is optional ---> PROBLEM : Some child class may have same duplicate method to work. e.g : printTicket() reponsible for printing pdf.
+ * 
+ * 
+ * Java8 also Introduced static method to write for performing same task or same functionality which is common for all classes. Coz In Java7 we could not implement the common requirement in Interface.
+ * 
+ * From Java8 Version We can write -
+ * 
+ * a) abstract method : Child class must implement as ordered by abstract method.
+ * b) default method : child class can skip the methods, ordered by Interface.
+ * c) static method : Some functionality common to all classes, so they do not need to implement that in each classes they can directly call it.
+ * 
+ * 
+ * 
+ *
+ * 
+ * 
  * ONE RULE IN LIFE, ALL BEAUTIFUL THINGS COME WITH SOME PROBELM!
  * 
  * 
@@ -47,11 +70,11 @@ import com.kodewala.day38_Interface_Java8.SearchResult;
  *  a) Normal Interface : More than one abstract methods.
  *  b) Functional Interface/Single Abstract Method(SAM) Interface : Interface which got only one abstract method.
  *  c) Marker Interface/Tag Interface : Interface without methods i.e NO methods at well i.e empty Interface.
+ *  d) Nested Interface : Less Use.
  *  
- *  Marker Interface help us to perform some special activity. Ex: Serialization, Cloning.
  *  
+ *  Ex: Functional Interface - To achieve the Lambda Expression in java
  *  
- *  Ex: Functional Interface -
  *  public interface IInvoice{
  *  
  *  		void doInvoice();  // Functional Interface(only one abstract method i.e public abstract void doInvoice() )
@@ -60,6 +83,9 @@ import com.kodewala.day38_Interface_Java8.SearchResult;
  *  
  *  
  *  Ex: Marker Interface/Tag Interface : Marker interface to mark something.
+ *  
+ *   Marker Interface help us to perform some special activity. Ex: Serialization, Cloning.
+ *  
  *  public interface IInvoice{
  *  
  *  
@@ -71,7 +97,7 @@ import com.kodewala.day38_Interface_Java8.SearchResult;
 public interface IBooking {
 	
 	
-//	1. Abstract methods - doest not have the body
+//	1. Abstract methods(Java 7) - doest not have the body
 	
 	/** 
 	 * Developed In 2020 
@@ -83,7 +109,7 @@ public interface IBooking {
 	public SearchResult search(); 
 
 	
-//  2. default methods : Optional methods to classes (In default method we see the code duplicay)
+//  2. default methods(Java 8) : Optional methods to classes (In default method we see the code duplicay)
 
 
 	public default void autoUpgrade() { 
@@ -105,7 +131,7 @@ public interface IBooking {
 	}
 	
 	
-//3. private method : to avoid code duplicay inside the default method (Introduced in Java9)
+//3. private method(Java 9) : to avoid code duplicay inside the default method (Introduced in Java9)
 	private static void connectToDB() {
 		
 		System.out.println("IBooking.connectToDB()");
@@ -114,7 +140,7 @@ public interface IBooking {
 	
 	
 
-//4. static method : a method or Utility common for all classes 
+//4. static method(Java 8) : a method or Utility common for all classes 
 
 	static void printTicket(String path, String content) {
 		

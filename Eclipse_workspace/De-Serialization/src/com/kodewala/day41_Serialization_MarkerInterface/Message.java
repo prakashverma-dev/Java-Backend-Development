@@ -1,21 +1,21 @@
-package com.whatsapp.message.day41_Interface_Serialization;
+package com.kodewala.day41_Serialization_MarkerInterface;
 
 import java.io.Serializable;
 
+
+
+// Message class of User - Owner of this class given permission to serialize any Objects of this class -
 public class Message implements Serializable{
-	
-//	private static final long serialVersionUID = 1L; // L for long number
-	
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-	
+
+
+	private static final long serialVersionUID = 1L; // By-default we put 1L  -->  L for long number
 	
 	private String messageId;
 	private String message;
 	private transient String userId; // we dont want to Serialization --> Transient : Skipped during Serialization.
 	
+	
+	// Init constructor for this class  -
 	public Message(String messageId, String message) {
 		super();
 		this.messageId = messageId;
@@ -23,9 +23,8 @@ public class Message implements Serializable{
 	}
 	
 	
+	// Getter and Setter Method for all attributes of this class -
 	
-	
-
 	public String getUserId() {
 		return userId;
 	}
@@ -53,8 +52,8 @@ public class Message implements Serializable{
 		this.message = message;
 	}
 	
-	// Exception Error : Runtime Error
+	
 
 	
-	
 }
+
