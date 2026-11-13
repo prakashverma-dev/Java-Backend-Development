@@ -1,4 +1,22 @@
 
+/*
+#0. All Eclipse Short Cut :-
+
+Ctrl + Alt + T --> Open Terminal In Current Opened Tab
+Ctrl + shift + T ---> Open Type(Search for all Inbuilt Class)
+Ctrl + O  --> Opened Class, Look All methods Available Here.
+
+
+
+
+Ctrl + shift + + --> zoom
+
+
+
+
+
+*/
+
 
 //#1. To get Datatype of 'Object' class -
 
