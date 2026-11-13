@@ -28,7 +28,8 @@ public class HandleMessageSerialization {
 		
 		
 		// Creating Object for writting object for Output Stream -
-		ObjectOutputStream ObjOS = new ObjectOutputStream(fio); 
+		ObjectOutputStream ObjOS = new ObjectOutputStream(fio); // Created object from 'ObjectOutputStream' class to write the object in it.
+		
 				
 		ObjOS.writeObject(whatsappMsg); // passing the object to write the Object into the byte Stream here.
 		

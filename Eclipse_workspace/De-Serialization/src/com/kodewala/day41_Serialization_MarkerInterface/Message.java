@@ -4,7 +4,10 @@ import java.io.Serializable;
 
 
 
-// Message class of User - Owner of this class given permission to serialize any Objects of this class -
+
+
+
+// Owner of this class given permission to serialize or De-serialize any Objects of this class -
 public class Message implements Serializable{
 
 
@@ -16,24 +19,15 @@ public class Message implements Serializable{
 	
 	
 	// Init constructor for this class  -
-	public Message(String messageId, String message) {
+	public Message(String messageId, String message, String userId) {
 		super();
 		this.messageId = messageId;
 		this.message = message;
+		this.userId = userId;
 	}
 	
 	
 	// Getter and Setter Method for all attributes of this class -
-	
-	public String getUserId() {
-		return userId;
-	}
-
-
-	public void setUserId(String userId) {
-		this.userId = userId;
-	}
-
 
 
 	public String getMessageId() {
@@ -53,7 +47,15 @@ public class Message implements Serializable{
 	}
 	
 	
+	
+	public String getUserId() {
+		return userId;
+	}
 
+
+	public void setUserId(String userId) {
+		this.userId = userId;
+	}
 	
 }
 

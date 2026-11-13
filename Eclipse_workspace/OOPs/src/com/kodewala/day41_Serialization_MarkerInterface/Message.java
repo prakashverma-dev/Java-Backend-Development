@@ -46,11 +46,25 @@ import java.io.Serializable;
  * #Note : Once we serialize the Objects, we need to refresh project under 'Project Level' to see the file generated. 
  * 
  * 
+ * #3. 'transient' keyword : During Serialization if some data i.e Class attributes we do not want to sent over the network i.e serialize during its process, we mark that attribute with 'transient'. SO during Serualization this attribute will not convert into byte sreama nd will not sent over network -
  * 
- * 
+ *    private transient String userId; // Now, userId will not sent over the network i.e Skipped during Serialization.
  * 
  *
- * #3. Java I/O Streams : - 
+ *
+ * 'serialVersionUID' keyword : This 'serialVersionUID' is unique keyword given by JVM to class to put some Long value, in order to indentify the class during the De-serilization and if serialVersionUID will not match during de-serilozation it will not process and throw error. 
+ *
+ *
+ * If we skip serialVersionUID then JVM will generte its value internally, everytime when something we change in code with some different value assign to it. So, It is better to assign our own fixed static value i.e 1L for now to not change everytime during code changes. and same ID destination uses while de-serilization. 
+ *
+ *
+ * If we skip skip serialVersionUID, then JVM will give new its value each time internally while code changes. SO we put it manually a fixed i.e static value 1L.
+ *
+ *
+ *
+ *Note : During De-Serialization, Right class + Same serialVersionUID + same package --> used to de-serilize the byte stream into object successfully.  
+ *
+ * #4. Java I/O Streams : - 
  * 
  *  There is FileWriter for writing text and Scanner for reading text in Java. These are easy to use, but they are mainly designed for simple text files.
 	
@@ -80,32 +94,24 @@ public class Message implements Serializable{
 
 
 	private static final long serialVersionUID = 1L; // By-default we put 1L  -->  L for long number
-	
+//	serialVersionUID = 3453543456565; // If we skip serialVersionUID, JVM willgenerates everytime new Long value for it.
 	private String messageId;
 	private String message;
-	private transient String userId; // we dont want to Serialization --> Transient : Skipped during Serialization.
+	
+	//Suppose, Some Sensitive Data 'userId' is there, which we do not want to Serialize during its process, so 
+	private transient String userId; // userId data will be Skipped during Serialization.
 	
 	
 	// Init constructor for this class  -
-	public Message(String messageId, String message) {
+	public Message(String messageId, String message, String userId) {
 		super();
 		this.messageId = messageId;
 		this.message = message;
+		this.userId = userId;
 	}
 	
 	
 	// Getter and Setter Method for all attributes of this class -
-	
-	public String getUserId() {
-		return userId;
-	}
-
-
-	public void setUserId(String userId) {
-		this.userId = userId;
-	}
-
-
 
 	public String getMessageId() {
 		return messageId;
@@ -123,6 +129,15 @@ public class Message implements Serializable{
 		this.message = message;
 	}
 	
+	
+	public String getUserId() {
+		return userId;
+	}
+
+
+	public void setUserId(String userId) {
+		this.userId = userId;
+	}
 	
 
 	

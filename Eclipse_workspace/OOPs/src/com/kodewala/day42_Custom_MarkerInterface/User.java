@@ -1,5 +1,7 @@
-package com.kodewala.day42_Interface_Marker;
+package com.kodewala.day42_Custom_MarkerInterface;
 
+
+//This is Class Where we check Implemented Custome marker Interface 'Deletable' working or not -
 public class User implements Deletable {
 	
 	private String userName;
@@ -12,7 +14,7 @@ public class User implements Deletable {
 		this.id = id;
 	}
 
-
+	// getter and setter for userName only -
 	public String getUserName() {
 		return userName;
 	}

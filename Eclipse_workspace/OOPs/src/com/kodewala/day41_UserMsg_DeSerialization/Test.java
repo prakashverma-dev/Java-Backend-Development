@@ -1,4 +1,4 @@
-package com.kodewala.day41_DeSerialization;
+package com.kodewala.day41_UserMsg_DeSerialization;
 
 public class Test {
 	
