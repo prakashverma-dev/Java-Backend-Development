@@ -1,0 +1,7 @@
+[2026-11-14T16:29:50.5857494+05:30[Asia/Calcutta]] [INFO] Started opening dump E:\My Coding - Journey\Java Backend Development\Eclipse_workspace\OOPs\java_pid23900.hprof at 2026-11-14T16:29:50.5757298+05:30[Asia/Calcutta]
+[2026-11-14T16:29:50.8128615+05:30[Asia/Calcutta]] [INFO] Detected compressed references, because with uncompressed 64-bit references the array at 0xffc00f48 would overlap the array at 0xffc00ea8
+[2026-11-14T16:29:50.8418635+05:30[Asia/Calcutta]] [INFO] Wrote threads call stacks to E:\My Coding - Journey\Java Backend Development\Eclipse_workspace\OOPs\java_pid23900.threads
+[2026-11-14T16:29:50.861869+05:30[Asia/Calcutta]] [INFO] Heap E:\My Coding - Journey\Java Backend Development\Eclipse_workspace\OOPs\java_pid23900.hprof contains 28,481 objects
+[2026-11-14T16:29:51.4488729+05:30[Asia/Calcutta]] [INFO] The keep unreachable objects condition is set to false. This may come either from the preference or dump condition requirements.
+[2026-11-14T16:29:51.4638791+05:30[Asia/Calcutta]] [INFO] Removed 940 unreachable objects using 15,800 bytes
+[2026-11-14T16:29:51.9439247+05:30[Asia/Calcutta]] [INFO] Finished opening dump in 1.36 seconds (1.3621935s) at 2026-11-14T16:29:51.9379233+05:30[Asia/Calcutta]
