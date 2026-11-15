@@ -1,4 +1,4 @@
-package com.kodewala.day26_StringBuffer_Builder;import java.util.EmptyStackException;
+package com.kodewala.day26_StringBuffer_Builder;
 
 /*
  * 
@@ -68,6 +68,8 @@ public class Driver {
 //		Note : .append() method doesnot create 'new' object in HEAP Area, where as it updates/modifies by existing object in HEAP area with latest value.
 		
 		
+		
+		
 		//ii. We try to add a string at each loop running -
 		
 		
@@ -81,7 +83,11 @@ public class Driver {
 		}
 		
 		System.out.println(sb2);
-		
+
+
+
+
+
 		
 		
 		// iii. checking .equals() for StringBuilder - In StringBuilder Class, .equals() method it not ovverriden so It takes from 'Object' class and compares the addresses -

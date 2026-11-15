@@ -1,4 +1,5 @@
-package com.kodewala.day27_Prerequisite;
+package com.kodewala.day27_static_instance_initBlock;
+
 
 /*
  * 
@@ -8,7 +9,11 @@ package com.kodewala.day27_Prerequisite;
  * 
  * 
  * 
- * # Initialization Blocks/ Init Blocks : -
+
+ * 
+ * 
+ * # Initialization Blocks/ Init Blocks : - These are SIB(static init Block) and IIB(instance init Block) -
+ * 
  * 
  * 	i. Static Init Block : executes only once just after loading the class for first time for first object creation, After then Constructor get called.
  * 
@@ -22,6 +27,8 @@ package com.kodewala.day27_Prerequisite;
  * 
  * 				}
  * 
+ * Note : Order of static block doesnot matter for its execution, it always executes all init block before the constructor call.
+ * 
  * ORDER : We we create object : Instance Class Loads --> All Init Block Execute Once --> At End COnstructor get called.
  * 
  * Purpose : Some activity which could be common for all the objects.
@@ -32,6 +39,7 @@ package com.kodewala.day27_Prerequisite;
  * 
  * 			  }
  * 
+ * When we want to execute some activity for each Objects before execution of construtor or before creating object. We use intance init block. 
  * 
  * # Static vs Dynamic Class Loading : -
  * 
@@ -46,29 +54,50 @@ package com.kodewala.day27_Prerequisite;
  * 
  * */
 
-public class Driver {
+public class User {
 	
+	
+	  String userName;
+	  String userId;
+	  String mobileNo; 
+	  	 
+	  
+	
+	//Writing Static Block - execute when this class will be loaded --> class will be loaded when we try to create objects.
+	static {
+		System.out.println("I am in the static Init Block 1..");
+	   
+	}
+	
+	static {
+		System.out.println("I am in the static Init Block 2..");
+	}
+	
+	public User(String userName, String userId, String mobileNo) {
+		
+		super(); // NOte : First line of Constructor must be either super() or this(). By-default we get super() with no arguments, even though if we not writting.
+				// It will call 'Object' Super class.
+		
+		System.out.println("User.User(String userName, String userId, String mobileNo)... Constructor");
+		this.userName = userName;
+		this.userId = userId;
+		this.mobileNo = mobileNo;
+		
+		
+	
+	}
+	
+	static {
+		System.out.println("I am in the static Init Block 3..");
+	
+		 System.out.println("dff");
 
-  public static void main(String[] args) {
-	  
-	  System.out.println("Driver.main()..START");
-	 
-	  
-	  // For all the users, Init Block will execute once, hence that is common for all users -
-	 User u1 = new User("Prakash", "PRA1323", "73232432423"); // As soon as 'User' Class loads, Static Block Executes only once after then Constructor get called. IF we create more object It will not executes for other object, It only executes for first object created and class loaded.
-	 
-	 User u2 = new User("Rohit", "RKA1323", "98794543465"); // Static block will not execute, Constructor will executes.
-	 User u3 = new User("Shravya", "JKR1323", "34245467643"); // Static block will not execute, Constructor will executes.
-	 
-	 
-	 
-	 
-	 
-	 
-		 // If We didnt Create the Object here then, Only This Class ie Driver class will be loaded and its call the Driver.main() method by JVM.
-	 
-	 System.out.println("Driver.main()..END");
+
+
+
 
 	}
+	
+	
 
 }

@@ -2,18 +2,29 @@
 /*
 #0. All Eclipse Short Cut :-
 
-Ctrl + Alt + T --> Open Terminal In Current Opened Tab
+Ctrl + Alt + T --> Open Terminal In Current Opened Tab(I modified it with ctrl + `)
 Ctrl + shift + T ---> Open Type(Search for all Inbuilt Class)
 Ctrl + O  --> Opened Class, Look All methods Available Here.
 
 
+alt + downArrow --> move selected lines downwards
+alt + upArrow --> move selected lines upwards
 
 
-Ctrl + shift + + --> zoom
+Alt + D --> Delete current Cursor line or Select Current line or Multiple-Line and Delete.(Inbuilt Ctrl + D)
+Alt + S --> Select current line to left end.
+
+alt + shit + downArrow --> copy above line/lines down
 
 
 
 
+Mouse Click Short-Cut -
+Doubel-click : Click twice on any Word to highlight or get selected the word.
+Triple-click : Rapidly click three times anywhere on the line to highlight the entire row.
+Double Click on space before Arguments : Double click left or right space or on bracket of Argument to selecte all arguments complemently at once.
+
+Optional --> Double-Click + Drag : To select multiple lines upward or downward.
 
 */
 
@@ -32,10 +43,10 @@ class Check {
         // System.out.println(chk1.getClass().getName());
 
 
-        
 		int a = Integer.parseInt(value[0]);
 		int b = Integer.parseInt(value[1]);
-
+        
+        
         // System.out.println(a.getClass().getName());
 		
 		// System.out.print("The sum is :"+(a+b));
