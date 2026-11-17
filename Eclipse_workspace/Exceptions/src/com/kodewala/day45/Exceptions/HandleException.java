@@ -1,4 +1,38 @@
-package com.kodewala.day45.Exception;
+package com.kodewala.day45.Exceptions;
+
+
+/*
+ * 
+ * 
+  		
+  		
+  		
+  
+  
+  
+  
+  
+   ##4.  Exception Handling : When exception occured during the run-time execution, we need to handle all expected rishky code in try and catch block.
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ */
 
 public class HandleException {
 
