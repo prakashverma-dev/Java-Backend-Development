@@ -14,7 +14,7 @@ Learning about errors helps improve debugging and problem-solving skills.
 
  i. Compile-Time Error : Detected by the compiler. Prevents code from running.
  ii. Runtime Error : 	Occurs while the program is running. Often causes crashes.
- iii. Logical Error : Code runs but gives incorrect results. Hardest to find.
+ iii. Logical Error : Code runs but gives incorrect results. Hardest to find. 
 
  
  
@@ -139,6 +139,7 @@ System.out.println("The Sum is : " + sum); // The code mistakenly subtracts inst
 	 Arithmetic Exception
 	 Number Format Exception
 	 Array Index Out of Bound Exception
+	 Class Cast Exception : when trying to cast an Object to an incompatible class.
 	 
  
  
