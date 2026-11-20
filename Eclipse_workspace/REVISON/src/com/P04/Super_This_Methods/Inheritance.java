@@ -97,7 +97,7 @@ class Samsung extends Android {
 
 
 
-class Driver1 {
+public class Inheritance {
 
 	public static void main(String[] args) {
 		
