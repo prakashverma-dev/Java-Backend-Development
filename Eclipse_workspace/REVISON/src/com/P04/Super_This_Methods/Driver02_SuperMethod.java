@@ -45,7 +45,7 @@ class B extends A{
 }
 
 
-public class SuperDriver {
+public class Driver02_SuperMethod {
  
 	public static void main(String[] args) {
 		
@@ -230,3 +230,68 @@ class Driver3 {
 	}
 
 }
+
+
+//Example5 : Parent Class Constructor attributes Initialization (Constructor Chaining) -
+
+
+//You use super() or super(arguments) inside a child class constructor to call the parent class constructor and reuse its initialization logic.
+//• Implicit call. If you do not write super(), the Java compiler automatically inserts a no-argument super() as the very first line of your child constructor.
+//• Explicit call. As noted by developers on Stack Overflow, if the parent class only defines parameterized constructors (and lacks a no-argument constructor), you must explicitly call super(args) to avoid a compile-time error.
+
+
+class Person {
+	
+    String name;
+    
+    // Parameterized Contructor(There is no Default constructor) -
+    Person(String name) {
+    	
+      this.name = name;
+      System.out.println("Person.Person()..Parameterized Parent Constructor");  
+    }
+    
+}
+
+class Employee extends Person {
+	
+    int id;
+
+    Employee(String name, int id) {
+    	
+        super(name); // Must be the very first statement of Constructor
+        this.id = id;
+        
+        System.out.println("Employee.Employee()..Parameterized Child Constructor");  
+    }
+    
+    
+    
+}
+
+
+class TEST {
+
+	public static void main(String[] args) {
+		
+		Employee emp = new Employee("Praksh Verma", 242424);
+		
+		System.out.println(emp.name);
+		System.out.println(emp.id);
+		
+		//Output just after just object creation -
+		
+		/*
+		 
+		 Person.Person()..Parameterized Parent Constructor
+		 Employee.Employee()..Parameterized Child Constructor
+		 Praksh Verma
+		 242424
+		 
+		 */
+		
+
+	}
+
+}
+	

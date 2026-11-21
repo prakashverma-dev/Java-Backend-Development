@@ -23,7 +23,7 @@ Where System.out.println() Can Be Used -
  
  
  */
-public class SysOutUse {
+public class Driver04_SysOutUse {
 
     // INVALID: Direct statement inside the class body causes a compilation error
     // System.out.println("This will not compile");
@@ -39,7 +39,7 @@ public class SysOutUse {
     }
 
     // 3. VALID: Constructor of this class
-    public SysOutUse() {
+    public Driver04_SysOutUse() {
         System.out.println("Runs inside the constructor.");
     }
 
@@ -56,7 +56,7 @@ public class SysOutUse {
     // 6. VALID: Main method
     public static void main(String[] args) {
         System.out.println("Runs when the program starts.");
-        SysOutUse obj = new SysOutUse();
+        Driver04_SysOutUse obj = new Driver04_SysOutUse();
         obj.sayHello(); // Instance method or Non-Static method need to call via object.
     }
 

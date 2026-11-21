@@ -92,7 +92,7 @@ class B4 extends A4{
 }
 
 
-public class ThisDriver {
+public class Driver03_ThisMethod {
 	
 	public static void main(String[] args) {
 		

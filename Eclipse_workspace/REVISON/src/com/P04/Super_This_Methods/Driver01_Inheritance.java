@@ -42,31 +42,25 @@ package com.P04.Super_This_Methods;
  
  
  */
-
+// Example1 : Basic How Inheritance works and First time Constructor creation -
 class MobilePhone{
 	
+	String name = "Galaxy Z 2";
 	
-	//lets's Explicity define the default constructor to see is it getting called or not -
+	//lets's Explicitly define the default constructor to see is it getting called or not -
 	public MobilePhone() {
 		
 		super();
 		System.out.println("In Mobile Class Constructor");
 	}
 	
-	
-
-	
-    String name = "Galaxy Z 2";
-
+ 
+	//getter for 'name' field -
 	public String getName() {
 		
 		System.out.println("From the Base Class Mobile Phone");
 		return name;
 	}
-
-		
-	
-
 	
 	
 }
@@ -97,7 +91,7 @@ class Samsung extends Android {
 
 
 
-public class Inheritance {
+public class Driver01_Inheritance {
 
 	public static void main(String[] args) {
 		
